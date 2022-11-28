@@ -4,6 +4,13 @@
   "newProjectRoot": "projects",
   "projects": {
     "i18nDemo": {
+      "i18n":{
+      "locales":{
+        "hi":"src/translate/messages.hi.xlf",
+        "es":"src/translate/messages.es.xlf",
+        "en":"src/translate/messages.en.xlf"
+      }
+    },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -41,6 +48,7 @@
                   "maximumError": "4kb"
                 }
               ],
+              
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -48,6 +56,21 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "hi":{
+              "localize":[
+                "hi"
+              ]
+            },
+            "es":{
+              "localize":[
+                "es"
+              ]
+            },
+            "en":{
+              "localize":[
+                "en"
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -65,6 +88,15 @@
           "configurations": {
             "production": {
               "browserTarget": "i18nDemo:build:production"
+            },
+            "hi":{
+              "browserTarget": "i18nDemo:build:hi"
+            },
+            "es":{
+              "browserTarget": "i18nDemo:build:es"
+            },
+            "en":{
+              "browserTarget": "i18nDemo:build:en"
             },
             "development": {
               "browserTarget": "i18nDemo:build:development"
@@ -97,5 +129,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "dc9d58b4-8a25-47a6-a14c-5fd94035e149"
   }
 }
